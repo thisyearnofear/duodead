@@ -172,8 +172,39 @@ Each filter has slightly different attributes. These filters can be applied to a
 </code></pre>
 
 <div class="box-attention">
-<strong>Attention:</strong> Some of these techniques are very experimental and won't work in all browsers.</strong>
+<strong>Attention:</strong> These SVG filters do not seem to work in Firefox currently, so treat filter animations such as this one as a progressive enhancement.</strong>
 </div>
+
+<h2>Sequencing Animations</h2>
+
+CSS keyframes do not provide us a convenient way of sequencing and composing animations. The best way to approach this problem is to plan (storyboard) your animation as a <strong>timeline</strong> and use a preprocessor such as Sass to generate the keyframes.
+
+For the fox, transforms and absolute time offsets (seconds) were used to animate each body part after outlining the storyboard for when each animation should occur. Here's an example of how the fox's nose was outlined in SCSS:
+
+<pre><code>
+$animations: (
+  // ...
+
+  'nose': (
+    // resting position
+    (4s, 5s, 7s): rotateY(-4deg),
+
+    // nose down
+    4.5s: rotateY(-4deg) rotateX(-3deg),
+
+    // fox looks left
+    (7.5s, 9s): rotateX(-3deg) rotateY(-28deg) rotateZ(-11deg),
+
+    // fox looks right
+    (9.5s, 12s): rotateY(7deg),
+
+    // fox looks straight ahead
+    13s: rotateY(0),
+  ),
+
+  // ...
+);
+</code></pre>
 
 Browser support icons shortcode:
 [browsersupport chrome="all" safari="all" opera="all" firefox="flag" ie="9+"]
