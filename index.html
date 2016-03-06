@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Felix the CSS Fox</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/fox.css" />
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<header class="codrops-header">
+				<div class="codrops-links">
+					<a class="codrops-icon codrops-icon--prev" href="" title="Previous Demo"><span>Previous Demo</span></a>
+					<a class="codrops-icon codrops-icon--drop" href="" title="Back to the article"><span>Back to the Codrops article</span></a>
+				</div>
+				<h1>Animated Animals <span>Felix the CSS/SVG Fox</span></h1>
+			</header>
+			<div class="content content--fox">
+				<div class="fox">				
+					<div class="head">
+						<div class="face">						
+							<div class="ears">
+								<div class="ear"></div>
+								<div class="ear"></div>
+							</div>
+							<div class="front"></div>
+							<div class="eyes"></div>
+							<div class="nose"></div>
+						</div>
+					</div>
+
+					<div class="torso">
+						<div class="front-leg"></div>
+						<div class="front-leg"></div>
+					</div>
+
+					<div class="tail">
+						<div class="tail">
+							<div class="tail">
+								<div class="tail">
+									<div class="tail">
+										<div class="tail">
+											<div class="tail">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none">
+				  <defs>
+				    <filter id="squiggly-0">
+				      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0"/>
+				      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="2" />
+				    </filter>
+				    <filter id="squiggly-1">
+				      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1"/>
+				<feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+				    </filter>
+				    
+				    <filter id="squiggly-2">
+				      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2"/>
+				<feDisplacementMap in="SourceGraphic" in2="noise" scale="2" />
+				    </filter>
+				    <filter id="squiggly-3">
+				      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3"/>
+				<feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
+				    </filter>
+				    
+				    <filter id="squiggly-4">
+				      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4"/>
+				<feDisplacementMap in="SourceGraphic" in2="noise" scale="1" />
+				    </filter>
+				  </defs> 
+				</svg>
+			</div>
+			<!-- Related demos -->
+			<section class="content content--related">
+				<p>If you enjoyed this demo you might also like:</p>
+				<a class="media-item" href="">
+					<img class="media-item__img" src="">
+					<h3 class="media-item__title">Title</h3>
+				</a>
+				<a class="media-item" href="">
+					<img class="media-item__img" src="">
+					<h3 class="media-item__title">Title</h3>
+				</a>
+			</section>
+		</div><!-- /container -->
+	</body>
+</html>
