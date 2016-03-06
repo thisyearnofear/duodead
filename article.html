@@ -107,38 +107,69 @@ This will generate an encoded, inline SVG string inside of a `url()` that looks 
 }
 </code></pre>
 
-Since the SVG is a background image, it can be transformed and animated as if it were an HTML element. And since it was created in Sass-SVG, I could use Sass <code>$variables</code> to have full control of the SVG <code>fill</code> and <code>stroke</code> colors.
+Since the SVG is a background image, it can be transformed and animated as if it were an HTML element. With Sass-SVG, Sass <code>$variables</code> can be used to have full control of the SVG <code>fill</code> and <code>stroke</code> colors.
 
-<div class="foo"></div>
+<h2>"Squigglevision" with SVG Filters</h2>
 
-For code snippets replace < and > with &lt; and &gt;
+<a href="https://en.wikipedia.org/wiki/Squigglevision">Squigglevision</a> is an animation technique that simulates hand-drawn animation by wiggling the outlines of a shape. This makes scenes, such as the fox and husky, seem more dynamic and sketched, even when the animals aren't moving.
 
-Example for HTML:
+SVG has a filter called <code>&lt;feTurbulence&gt;</code> that gives "noise" to whatever it's applied to. The <code>&lt;feDisplacementMap&gt;</code> filter is combined to specify how far away the pixels should move in each filter.
 
 <pre class="brush:html"><code>
-&lt;div class="st-container"&gt;
-&lt;/div&gt;&lt;!-- // st-container --&gt;
+&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
+  &lt;defs&gt;
+    &lt;filter id="squiggly-0"&gt;
+      &lt;feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0"/&gt;
+      &lt;feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="2" /&gt;
+    &lt;/filter&gt;
+    &lt;filter id="squiggly-1"&gt;
+      &lt;feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1"/&gt;
+&lt;feDisplacementMap in="SourceGraphic" in2="noise" scale="3" /&gt;
+    &lt;/filter&gt;
+    
+    &lt;filter id="squiggly-2"&gt;
+      &lt;feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2"/&gt;
+&lt;feDisplacementMap in="SourceGraphic" in2="noise" scale="2" /&gt;
+    &lt;/filter&gt;
+    &lt;filter id="squiggly-3"&gt;
+      &lt;feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3"/&gt;
+&lt;feDisplacementMap in="SourceGraphic" in2="noise" scale="3" /&gt;
+    &lt;/filter&gt;
+    
+    &lt;filter id="squiggly-4"&gt;
+      &lt;feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4"/&gt;
+&lt;feDisplacementMap in="SourceGraphic" in2="noise" scale="1" /&gt;
+    &lt;/filter&gt;
+  &lt;/defs&gt; 
+&lt;/svg&gt;
 </code></pre>
 
-Example for CSS:
+Each filter has slightly different attributes. These filters can be applied to any element using the CSS <code>filter: url(...);</code> property. To create the "squigglevision" effect, a keyframe animation sets one filter at a time in rapid succession.
 
 <pre class="brush:css"><code>
-body {
-	background: #000;
+@keyframes squigglevision {
+  0% {
+    -webkit-filter: url('#squiggly-0');
+    filter: url('#squiggly-0');
+  }
+  25% {
+    -webkit-filter: url('#squiggly-1');
+    filter: url('#squiggly-1');
+  }
+  50% {
+    -webkit-filter: url('#squiggly-2');
+    filter: url('#squiggly-2');
+  }
+  75% {
+    -webkit-filter: url('#squiggly-3');
+    filter: url('#squiggly-3');
+  }
+  100% {
+    -webkit-filter: url('#squiggly-4');
+    filter: url('#squiggly-4');
+  }
 }
 </code></pre>
-
-Example for JavaScript:
-
-<pre class="brush:js"><code>
-	...
-</code></pre>
-
-Available brushes for code hightlighting: html, scss, css, js, xml, php, mysql or any other if needed: https://highlightjs.org/
-
-Images can be a maximum of 890px wide (this will fill all the width of the article).
-
-Available styles and shortcodes:
 
 <div class="box-attention">
 <strong>Attention:</strong> Some of these techniques are very experimental and won't work in all browsers.</strong>
