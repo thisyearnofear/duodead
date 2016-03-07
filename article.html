@@ -1,6 +1,7 @@
 <!-- Main image 580x315 (optional) -->
+[browsersupport chrome="all" firefox="all"]
 
-Today we want to show you how the clever use of HTML, CSS3 sequenced animations, and SVG filters can bring to life one of the most unlikely (yet adorable) things to be seen on a webpage - animals.
+Today we want to show you how the clever use of HTML, CSS3 sequenced animations, and SVG filters can bring to life one of the most unlikely (yet adorable) things to be seen on a webpage - animals. We'll explore two techniques for drawing the animals - one with plain HTML and CSS, and one with inline SVG background images.
 
 This demo is somewhat experimental - animated SVG filters are not available for Internet Explorer or Firefox at the time of writing, so the jittery "squigglevision" effect can only be seen on Chrome.
 
@@ -71,7 +72,7 @@ Other shapes, such as the front legs, could not be shaped with <code>border-radi
 
 <h3>Shaping with SVG</h3>
 
-For the fox, <a href="https://github.com/davidkpiano/sass-svg">my Sass-SVG tool</a> was used to create the complex SVG shapes for each body part. SVG images can be <a href="https://css-tricks.com/using-svg/">used as background images</a>, and even better, they can be written inline as long as they are either base-64 or UTF-8 encoded (for maximum browser support). Writing them by hand is tricky though, so let's see how Sass-SVG makes it a little easier, using the fox's nose as an example:
+For the fox, <a target="_blank" href="https://github.com/davidkpiano/sass-svg">Sass-SVG</a> was used to create the complex SVG shapes for each body part. SVG images can be <a target="_blank" href="https://css-tricks.com/using-svg/">used as background images</a>, and even better, they can be written inline as long as they are either base-64 or UTF-8 encoded (for maximum browser support). Writing them by hand is tricky though, so let's see how Sass-SVG makes it a little easier, using the fox's nose as an example:
 
 <pre class="brush:scss"><code>
 .fox-nose:before {
@@ -111,7 +112,7 @@ Since the SVG is a background image, it can be transformed and animated as if it
 
 <h2>"Squigglevision" with SVG Filters</h2>
 
-<a href="https://en.wikipedia.org/wiki/Squigglevision">Squigglevision</a> is an animation technique that simulates hand-drawn animation by wiggling the outlines of a shape. This makes scenes, such as the fox and husky, seem more dynamic and sketched, even when the animals aren't moving.
+<a target="_blank" href="https://en.wikipedia.org/wiki/Squigglevision">Squigglevision</a> is an animation technique that simulates hand-drawn animation by wiggling the outlines of a shape. This makes scenes, such as the fox and husky, seem more dynamic and sketched, even when the animals aren't moving.
 
 SVG has a filter called <code>&lt;feTurbulence&gt;</code> that gives "noise" to whatever it's applied to. The <code>&lt;feDisplacementMap&gt;</code> filter is combined to specify how far away the pixels should move in each filter.
 
@@ -233,9 +234,5 @@ Animations can then be applied to their respective body parts, e.g. <code>animat
 
 Another important part of making animations seem life-like is carefully choosing (or creating) easing curves for each part of the animation. The best kinds of lively easing curves to use are "sinusoidal" curves -- in other words, easing curves that smoothly undulate in and out. Natural movements don't come to a hard start or stop, so the <code>animation-timing-function</code> should reflect that.
 
-For the fox and husky, I used <code>cubic-bezier(0.645, 0.045, 0.355, 1)</code> <a href="http://cubic-bezier.com/#.64,.05,.35,1">(preview here)</a>. As always, it's best to experiment with the curves to find the one that best fits your animation.
-
-Browser support icons shortcode:
-[browsersupport chrome="all" safari="all" opera="all" firefox="flag" ie="9+"]
-(If a browser is not supported at all, just leave it out)
+For the fox and husky, I used <code>cubic-bezier(0.645, 0.045, 0.355, 1)</code> <a target="_blank" href="http://cubic-bezier.com/#.64,.05,.35,1">(preview here)</a>. As always, it's best to experiment with the curves to find the one that best fits your animation.
 
