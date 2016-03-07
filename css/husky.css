@@ -405,7 +405,8 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 3rem 0; }
+  padding: 3rem 0;
+  animation: squigglevision 0.3s infinite; }
   .content--husky *, .content--husky *:before, .content--husky *:after {
     animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1) !important; }
   .content--husky *:before, .content--husky *:after {
@@ -768,16 +769,21 @@ body {
   .husky > .husky-tail > .husky-tail {
     right: 88%; }
 
-@keyframes squiggly-anim {
+@keyframes squigglevision {
   0% {
+    -webkit-filter: url("#squiggly-0");
     filter: url("#squiggly-0"); }
   25% {
+    -webkit-filter: url("#squiggly-1");
     filter: url("#squiggly-1"); }
   50% {
+    -webkit-filter: url("#squiggly-2");
     filter: url("#squiggly-2"); }
   75% {
+    -webkit-filter: url("#squiggly-3");
     filter: url("#squiggly-3"); }
   100% {
+    -webkit-filter: url("#squiggly-4");
     filter: url("#squiggly-4"); } }
 
 *, *:before, *:after {
