@@ -750,6 +750,7 @@ body {
   bottom: 0;
   right: 72%;
   background: #2c2f36;
+  background: linear-gradient(to bottom, #2c2f36, #2c2f36 80%, white 80.1%, white);
   z-index: 0; }
   .husky-tail > .husky-tail {
     animation: husky-tail 12s none infinite;
