@@ -413,6 +413,21 @@ body {
     content: '';
     display: block;
     position: absolute; }
+  .content--husky > .mountain {
+    position: absolute;
+    height: 50vmin;
+    width: 50vmin;
+    transform: rotate(45deg); }
+    .content--husky > .mountain:before, .content--husky > .mountain:after {
+      height: 100%;
+      width: 100%; }
+    .content--husky > .mountain, .content--husky > .mountain:before, .content--husky > .mountain:after {
+      background: linear-gradient(to top left, transparent, transparent 50%, #3a80d7 51%, #3a80d7);
+      border-radius: 2vmin; }
+    .content--husky > .mountain:before {
+      transform: scale(0.8) translateX(40%) translateY(-40%); }
+    .content--husky > .mountain:after {
+      transform: scale(0.8) translateX(15%) translateY(-20%); }
 
 .husky {
   animation: husky-squiggly-anim 0.3s infinite;
