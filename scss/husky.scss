@@ -1,3 +1,4 @@
+@import 'node_modules/sass-svg/index';
 
 $husky-colors: (
   'bg': #4F8EDB,
@@ -231,9 +232,7 @@ body {
 }
 
 .content--related {
-  p {
-    color: white;
-  }
+  background: white;
 }
 
 .media-item {
@@ -271,33 +270,36 @@ body {
     position: absolute;
   }
 
-  > .mountain {
+  &, &:before, &:after {  
+    @include svg((viewBox: (0 0 500 70))) {
+      @include svg('path', (
+        fill: white,
+        d: 'M375,19c-37,0-82.5-19-125-19s-88,19-125,19S42.5,0,0,0v70h250h250V0C457.5,0,412,19,375,19z'
+      ));
+    }
+    background-repeat: no-repeat;
+    background-size: 400vmin;
+    background-position: -150vmin calc(100% + 10vmin);
+  }
+
+  &:before {
+    background-position: left bottom;
+  }
+
+  &:after {
+    background-position: -100vmin bottom;
+  }
+
+  &:before, &:after {
+    content: '';
+    display: block;
     position: absolute;
-    height: 50vmin;
-    width: 50vmin;
-    transform: rotate(45deg);
-
-    &:before, &:after {
-      height: 100%;
-      width: 100%;
-    }
-
-    &, &:before, &:after {
-      background: linear-gradient(to top left,
-        transparent,
-        transparent 50%,
-        darken(husky-color('bg'), 5%) 51%,
-        darken(husky-color('bg'), 5%));
-      border-radius: 2vmin;
-    }
-
-    &:before {
-      transform: scale(0.8) translateX(40%) translateY(-40%);
-    }
-
-    &:after {
-      transform: scale(0.8) translateX(15%) translateY(-20%)
-    }
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
   }
 }
 
@@ -326,7 +328,7 @@ body {
     height: 10%;
     top: calc(100% + 0.4vmin);
     z-index: 3;
-    background: husky-color('bg');
+    background: white;
   }
 }
 
@@ -721,11 +723,6 @@ body {
   bottom: 0;
   right: 72%;
   background: husky-color('dark');
-  background: linear-gradient(to bottom,
-    husky-color('dark'),
-    husky-color('dark') 80%,
-    white 80.1%,
-    white);
   z-index: 0;
   
   > .husky-tail {

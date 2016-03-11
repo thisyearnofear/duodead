@@ -386,8 +386,8 @@ body {
   .codrops-header > h1 > span {
     color: rgba(255, 255, 255, 0.6); }
 
-.content--related p {
-  color: white; }
+.content--related {
+  background: white; }
 
 .media-item {
   color: #C8DAF2; }
@@ -413,21 +413,25 @@ body {
     content: '';
     display: block;
     position: absolute; }
-  .content--husky > .mountain {
+  .content--husky, .content--husky:before, .content--husky:after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20500%2070%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M375%2C19c%2D37%2C0%2D82%2E5%2D19%2D125%2D19s%2D88%2C19%2D125%2C19S42%2E5%2C0%2C0%2C0v70h250h250V0C457%2E5%2C0%2C412%2C19%2C375%2C19z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-size: 400vmin;
+    background-position: -150vmin calc(100% + 10vmin); }
+  .content--husky:before {
+    background-position: left bottom; }
+  .content--husky:after {
+    background-position: -100vmin bottom; }
+  .content--husky:before, .content--husky:after {
+    content: '';
+    display: block;
     position: absolute;
-    height: 50vmin;
-    width: 50vmin;
-    transform: rotate(45deg); }
-    .content--husky > .mountain:before, .content--husky > .mountain:after {
-      height: 100%;
-      width: 100%; }
-    .content--husky > .mountain, .content--husky > .mountain:before, .content--husky > .mountain:after {
-      background: linear-gradient(to top left, transparent, transparent 50%, #3a80d7 51%, #3a80d7);
-      border-radius: 2vmin; }
-    .content--husky > .mountain:before {
-      transform: scale(0.8) translateX(40%) translateY(-40%); }
-    .content--husky > .mountain:after {
-      transform: scale(0.8) translateX(15%) translateY(-20%); }
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1; }
 
 .husky {
   animation: husky-squiggly-anim 0.3s infinite;
@@ -449,7 +453,7 @@ body {
     height: 10%;
     top: calc(100% + 0.4vmin);
     z-index: 3;
-    background: #4F8EDB; }
+    background: white; }
 
 .husky-head {
   animation: husky-head 12s none infinite;
@@ -766,7 +770,6 @@ body {
   bottom: 0;
   right: 72%;
   background: #2c2f36;
-  background: linear-gradient(to bottom, #2c2f36, #2c2f36 80%, white 80.1%, white);
   z-index: 0; }
   .husky-tail > .husky-tail {
     animation: husky-tail 12s none infinite;
