@@ -387,7 +387,7 @@ body {
     color: rgba(255, 255, 255, 0.6); }
 
 .content--related {
-  background: white; }
+  background: #dce8f8; }
 
 .media-item {
   color: #C8DAF2; }
@@ -414,7 +414,7 @@ body {
     display: block;
     position: absolute; }
   .content--husky, .content--husky:before, .content--husky:after {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20500%2070%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M375%2C19c%2D37%2C0%2D82%2E5%2D19%2D125%2D19s%2D88%2C19%2D125%2C19S42%2E5%2C0%2C0%2C0v70h250h250V0C457%2E5%2C0%2C412%2C19%2C375%2C19z%22%2F%3E%3C%2Fsvg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20500%2070%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23dce8f8%22%20d%3D%22M375%2C19c%2D37%2C0%2D82%2E5%2D19%2D125%2D19s%2D88%2C19%2D125%2C19S42%2E5%2C0%2C0%2C0v70h250h250V0C457%2E5%2C0%2C412%2C19%2C375%2C19z%22%2F%3E%3C%2Fsvg%3E");
     background-repeat: no-repeat;
     background-size: 400vmin;
     background-position: -150vmin calc(100% + 10vmin); }
@@ -453,7 +453,7 @@ body {
     height: 10%;
     top: calc(100% + 0.4vmin);
     z-index: 3;
-    background: white; }
+    background: #dce8f8; }
 
 .husky-head {
   animation: husky-head 12s none infinite;

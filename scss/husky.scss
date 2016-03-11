@@ -10,6 +10,7 @@ $husky-colors: (
   'ear': #DE6465,
   'eye': #5D8BC3,
   'tongue': #DE6465,
+  'snow': mix(white, #4F8EDB, 80%)
 );
 
 @function husky-color($name) {
@@ -232,7 +233,7 @@ body {
 }
 
 .content--related {
-  background: white;
+  background: husky-color('snow');
 }
 
 .media-item {
@@ -273,7 +274,7 @@ body {
   &, &:before, &:after {  
     @include svg((viewBox: (0 0 500 70))) {
       @include svg('path', (
-        fill: white,
+        fill: husky-color('snow'),
         d: 'M375,19c-37,0-82.5-19-125-19s-88,19-125,19S42.5,0,0,0v70h250h250V0C457.5,0,412,19,375,19z'
       ));
     }
@@ -328,7 +329,7 @@ body {
     height: 10%;
     top: calc(100% + 0.4vmin);
     z-index: 3;
-    background: white;
+    background: husky-color('snow');
   }
 }
 
