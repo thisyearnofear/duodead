@@ -5,7 +5,7 @@ $color-text: #84899C;
 $color-nose: #575A57;
 $duration: 17s;
 
-$frac: 0.05;
+$frac: 0.07;
 
 *, *:before, *:after {
   position: relative;
@@ -67,6 +67,10 @@ body {
       ));
     }
   }
+
+  @media (max-width: 700px) {
+    transform: translateX(-60%);
+  }
 }
 
 .fox {
@@ -77,7 +81,7 @@ body {
   animation: fox $duration none infinite,
     squigglevision 0.3s infinite;
   animation-timing-function: cubic-bezier(0, 0, 0.80, 0.90);
-  top: 20vmax;
+  bottom: 2.5vmax;
   left: 60%;
   transform-origin: bottom right;
 
