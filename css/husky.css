@@ -406,7 +406,8 @@ body {
   align-items: center;
   margin: 0;
   padding: 3rem 0;
-  animation: squigglevision 0.3s infinite; }
+  animation: squigglevision 0.3s infinite;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20height%3D%2278%22%20width%3D%22500%22%20viewBox%3D%220%200%20500%2078%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23dce8f8%22%20d%3D%22M375%2C27c%2D37%2C0%2D82%2E5%2D19%2D125%2D19s%2D88%2C19%2D125%2C19S42%2E5%2C8%2C0%2C8v70h250h250V8C457%2E5%2C8%2C412%2C27%2C375%2C27z%22%2F%3E%3C%2Fsvg%3E"); }
   .content--husky *, .content--husky *:before, .content--husky *:after {
     animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1) !important; }
   .content--husky *:before, .content--husky *:after {
@@ -414,14 +415,18 @@ body {
     display: block;
     position: absolute; }
   .content--husky, .content--husky:before, .content--husky:after {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20500%2070%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23dce8f8%22%20d%3D%22M375%2C19c%2D37%2C0%2D82%2E5%2D19%2D125%2D19s%2D88%2C19%2D125%2C19S42%2E5%2C0%2C0%2C0v70h250h250V0C457%2E5%2C0%2C412%2C19%2C375%2C19z%22%2F%3E%3C%2Fsvg%3E");
     background-repeat: no-repeat;
-    background-size: 400vmin;
-    background-position: -150vmin calc(100% + 10vmin); }
+    background-size: 395vmin;
+    background-position: -150vmin calc(100% + 11vmin); }
+  .content--husky:before, .content--husky:after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20height%3D%2278%22%20width%3D%22500%22%20viewBox%3D%220%200%20500%2078%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23dce8f8%22%20d%3D%22M375%2C27c%2D37%2C0%2D82%2E5%2D19%2D125%2D19s%2D88%2C19%2D125%2C19S42%2E5%2C8%2C0%2C8v70h250h250V8C457%2E5%2C8%2C412%2C27%2C375%2C27z%22%2F%3E%3Cpolygon%20fill%3D%22rgba%280%2C%200%2C%200%2C%200%2E5%29%22%20points%3D%22256%2E3%2C0%20254%2E7%2C6%2E5%20256%2E1%2C6%2E5%20256%2E1%2C8%2E4%20256%2E3%2C8%2E4%20256%2E5%2C8%2E4%20256%2E5%2C6%2E5%20258%2C6%2E5%22%2F%3E%3Cpolygon%20fill%3D%22rgba%280%2C%200%2C%200%2C%200%2E5%29%22%20points%3D%22252%2E8%2C0%20251%2E2%2C6%2E5%20252%2E6%2C6%2E5%20252%2E6%2C8%2E4%20252%2E8%2C8%2E4%20253%2C8%2E4%20253%2C6%2E5%20254%2E4%2C6%2E5%22%2F%3E%3Cpolygon%20fill%3D%22rgba%280%2C%200%2C%200%2C%200%2E5%29%22%20points%3D%2221%2E4%2C1%2E3%2019%2E7%2C7%2E8%2021%2E2%2C7%2E8%2021%2E2%2C9%2E7%2021%2E4%2C9%2E7%2021%2E6%2C9%2E7%2021%2E6%2C7%2E8%2023%2C7%2E8%22%2F%3E%3C%2Fsvg%3E"); }
   .content--husky:before {
     background-position: left bottom; }
   .content--husky:after {
     background-position: -100vmin bottom; }
+    @media (max-width: 700px) {
+      .content--husky:after {
+        background-position: -115vmin bottom; } }
   .content--husky:before, .content--husky:after {
     content: '';
     display: block;
@@ -443,7 +448,7 @@ body {
   .husky:before {
     width: 90%;
     height: 0.4vmin;
-    background: #383B44;
+    background: #74767c;
     border-radius: 0.4vmin;
     top: 100%;
     left: 5%;
@@ -786,6 +791,31 @@ body {
     border-bottom-left-radius: 10% 50%; }
   .husky > .husky-tail > .husky-tail {
     right: 88%; }
+
+.snow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5; }
+  .snow:before, .snow:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    animation: snow 1.3s linear infinite;
+    box-shadow: 0.73306vw 65.36019vh white, 300.73306vw 65.36019vh white, 168.37526vw 33.61252vh white, 468.37526vw 33.61252vh white, 200.03409vw 50.11313vh white, 500.03409vw 50.11313vh white, 276.56544vw 50.19659vh white, 576.56544vw 50.19659vh white, 55.64355vw 60.61646vh white, 355.64355vw 60.61646vh white, 123.71584vw 98.44562vh white, 423.71584vw 98.44562vh white, 3.88679vw 8.41063vh white, 303.88679vw 8.41063vh white, 206.61764vw 96.10975vh white, 506.61764vw 96.10975vh white, 157.79772vw 4.9902vh white, 457.79772vw 4.9902vh white, 15.57217vw 75.12961vh white, 315.57217vw 75.12961vh white, 64.83851vw 54.09127vh white, 364.83851vw 54.09127vh white, 179.12146vw 11.94388vh white, 479.12146vw 11.94388vh white, 286.70573vw 57.40624vh white, 586.70573vw 57.40624vh white, 90.57131vw 69.30277vh white, 390.57131vw 69.30277vh white, 287.42878vw 31.81924vh white, 587.42878vw 31.81924vh white, 83.079vw 62.97737vh white, 383.079vw 62.97737vh white, 10.74071vw 29.44217vh white, 310.74071vw 29.44217vh white, 176.9174vw 82.31793vh white, 476.9174vw 82.31793vh white, 17.75882vw 9.19106vh white, 317.75882vw 9.19106vh white, 226.19841vw 58.81409vh white, 526.19841vw 58.81409vh white, 52.46381vw 57.94677vh white, 352.46381vw 57.94677vh white, 149.53938vw 54.66277vh white, 449.53938vw 54.66277vh white, 56.95179vw 2.21471vh white, 356.95179vw 2.21471vh white, 138.37442vw 99.91198vh white, 438.37442vw 99.91198vh white, 184.7229vw 13.55221vh white, 484.7229vw 13.55221vh white, 118.36755vw 4.56412vh white, 418.36755vw 4.56412vh white, 273.82681vw 58.06867vh white, 573.82681vw 58.06867vh white, 34.21378vw 92.78702vh white, 334.21378vw 92.78702vh white, 35.36904vw 94.70007vh white, 335.36904vw 94.70007vh white, 120.72464vw 24.22507vh white, 420.72464vw 24.22507vh white, 283.47772vw 77.58778vh white, 583.47772vw 77.58778vh white, 93.60441vw 48.57974vh white, 393.60441vw 48.57974vh white, 211.82049vw 57.47237vh white, 511.82049vw 57.47237vh white, 155.84056vw 70.47782vh white, 455.84056vw 70.47782vh white, 241.87204vw 68.72713vh white, 541.87204vw 68.72713vh white, 221.63137vw 37.75636vh white, 521.63137vw 37.75636vh white, 147.56719vw 41.89049vh white, 447.56719vw 41.89049vh white, 271.32278vw 81.0522vh white, 571.32278vw 81.0522vh white, 60.22608vw 76.10681vh white, 360.22608vw 76.10681vh white, 26.03409vw 13.98942vh white, 326.03409vw 13.98942vh white, 6.73598vw 80.96671vh white, 306.73598vw 80.96671vh white, 244.32811vw 31.18245vh white, 544.32811vw 31.18245vh white, 42.03162vw 43.66947vh white, 342.03162vw 43.66947vh white, 194.14558vw 28.87652vh white, 494.14558vw 28.87652vh white, 164.30518vw 30.87669vh white, 464.30518vw 30.87669vh white, 41.4619vw 48.08847vh white, 341.4619vw 48.08847vh white, 168.54061vw 20.94828vh white, 468.54061vw 20.94828vh white, 35.91889vw 72.43871vh white, 335.91889vw 72.43871vh white, 187.61315vw 15.61199vh white, 487.61315vw 15.61199vh white, 234.29303vw 16.86376vh white, 534.29303vw 16.86376vh white, 109.14497vw 76.03138vh white, 409.14497vw 76.03138vh white, 290.56661vw 17.54446vh white, 590.56661vw 17.54446vh white, 95.43642vw 64.12762vh white, 395.43642vw 64.12762vh white, 156.62265vw 47.13381vh white, 456.62265vw 47.13381vh white, 194.91014vw 60.77571vh white, 494.91014vw 60.77571vh white, 76.88281vw 49.88081vh white, 376.88281vw 49.88081vh white, 167.63358vw 24.68767vh white, 467.63358vw 24.68767vh white, 245.05104vw 97.30715vh white, 545.05104vw 97.30715vh white, 193.23536vw 92.3523vh white, 493.23536vw 92.3523vh white, 259.99402vw 84.70151vh white, 559.99402vw 84.70151vh white, 269.9411vw 63.3843vh white, 569.9411vw 63.3843vh white, 254.30889vw 85.24745vh white, 554.30889vw 85.24745vh white, 1.63131vw 36.50677vh white, 301.63131vw 36.50677vh white, 153.09145vw 57.8294vh white, 453.09145vw 57.8294vh white, 115.6129vw 86.44013vh white, 415.6129vw 86.44013vh white, 9.21141vw 55.80968vh white, 309.21141vw 55.80968vh white, 208.51622vw 55.52615vh white, 508.51622vw 55.52615vh white, 122.27209vw 20.57707vh white, 422.27209vw 20.57707vh white, 42.15483vw 77.18459vh white, 342.15483vw 77.18459vh white, 145.10982vw 80.09021vh white, 445.10982vw 80.09021vh white, 39.94458vw 76.51421vh white, 339.94458vw 76.51421vh white, 256.37635vw 24.52663vh white, 556.37635vw 24.52663vh white, 43.79084vw 12.33182vh white, 343.79084vw 12.33182vh white, 102.92378vw 41.88054vh white, 402.92378vw 41.88054vh white, 38.08895vw 34.12503vh white, 338.08895vw 34.12503vh white, 62.41891vw 88.57735vh white, 362.41891vw 88.57735vh white, 36.9642vw 65.0959vh white, 336.9642vw 65.0959vh white, 11.22088vw 18.54137vh white, 311.22088vw 18.54137vh white, 82.327vw 2.63426vh white, 382.327vw 2.63426vh white, 71.14848vw 68.41688vh white, 371.14848vw 68.41688vh white, 279.59925vw 41.37238vh white, 579.59925vw 41.37238vh white, 151.45361vw 75.69867vh white, 451.45361vw 75.69867vh white, 116.64857vw 1.16163vh white, 416.64857vw 1.16163vh white, 103.39515vw 62.45874vh white, 403.39515vw 62.45874vh white, 124.29861vw 73.69503vh white, 424.29861vw 73.69503vh white, 60.6081vw 80.38936vh white, 360.6081vw 80.38936vh white, 102.68441vw 78.74261vh white, 402.68441vw 78.74261vh white, 61.41429vw 89.63345vh white, 361.41429vw 89.63345vh white, 150.60409vw 91.18609vh white, 450.60409vw 91.18609vh white, 70.76145vw 31.66314vh white, 370.76145vw 31.66314vh white, 228.85018vw 3.92557vh white, 528.85018vw 3.92557vh white, 252.18369vw 76.9181vh white, 552.18369vw 76.9181vh white, 170.9801vw 75.2503vh white, 470.9801vw 75.2503vh white, 233.93191vw 19.02626vh white, 533.93191vw 19.02626vh white, 107.45621vw 94.53019vh white, 407.45621vw 94.53019vh white, 294.398vw 62.5527vh white, 594.398vw 62.5527vh white, 69.18521vw 81.73454vh white, 369.18521vw 81.73454vh white, 191.74129vw 18.37711vh white, 491.74129vw 18.37711vh white, 130.60251vw 90.10099vh white, 430.60251vw 90.10099vh white, 88.32777vw 31.46609vh white, 388.32777vw 31.46609vh white; }
+  .snow:after {
+    width: 8px;
+    height: 8px;
+    animation-duration: 1.1s; }
 
 @keyframes squigglevision {
   0% {
