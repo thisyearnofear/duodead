@@ -70,7 +70,7 @@ body {
       height: 100%;
       width: 100%; }
 
-.head {
+.fox-head {
   animation: head 17s none infinite;
   height: 11.76vmax;
   width: 11.76vmax;
@@ -80,22 +80,22 @@ body {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20168%20168%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23CE8D86%22%20id%3D%22circle%22%20d%3D%22M83%2E7%2C157%2E4c11%2E3%2C0%2C77%2E9%2D2%2E3%2C77%2E9%2D39%2E3c0%2C0%2C3%2E7%2C1%2C3%2E7%2C4%2E3c0%2C0%2C2%2E1%2D3%2E3%2C2%2E1%2D10%2E3s%2D9%2E3%2D78%2E2%2D83%2E7%2D78%2E2%20%20%20S0%2C105%2E1%2C0%2C112%2E1s2%2E1%2C10%2E3%2C2%2E1%2C10%2E3c0%2D3%2E3%2C3%2E7%2D4%2E3%2C3%2E7%2D4%2E3C5%2E8%2C155%2E1%2C72%2E4%2C157%2E4%2C83%2E7%2C157%2E4z%22%2F%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M83%2E7%2C139%2E9c38%2E2%2C0%2C40%2E1%2C6%2E9%2C40%2E1%2C6%2E9v5%2E7c%2D1%2E2%2C4%2E9%2D35%2E2%2C7%2E4%2D40%2E1%2C7%2E4s%2D39%2D2%2E6%2D40%2E1%2D7%2E4v%2D5%2E7%20%20%20C43%2E6%2C146%2E9%2C45%2E5%2C139%2E9%2C83%2E7%2C139%2E9z%22%2F%3E%3C%2Fsvg%3E");
   background-size: contain; }
 
-.face {
+.fox-face {
   perspective: 70vmax;
   perspective-origin: center center; }
-  .face, .face > * {
+  .fox-face, .fox-face > * {
     height: 100%;
     width: 100%;
     background-size: contain; }
 
-.front {
+.fox-front {
   animation: front 17s none infinite;
   transform-origin: bottom center; }
-  .front:after {
+  .fox-front:after {
     animation: front-after 17s none infinite;
     transform-origin: bottom right;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20168%20168%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M83%2E7%2C154%2E4c14%2C0%2C71%2C0%2E1%2C70%2E3%2D38%2E5l3%2E8%2D1%2E5c0%2C0%2D24%2E1%2D35%2E5%2D74%2D35%2E5s%2D74%2C35%2E5%2D74%2C35%2E5l3%2E8%2C1%2E5%20%20%20C12%2E7%2C154%2E5%2C69%2E7%2C154%2E4%2C83%2E7%2C154%2E4z%22%2F%3E%3C%2Fsvg%3E"); }
-  .front:before {
+  .fox-front:before {
     animation: front-before 17s none infinite;
     transform-origin: right top;
     height: 5.67vmax;
@@ -105,47 +105,47 @@ body {
     transform: rotateY(90deg);
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%22%2D337%20181%2E6%20115%2E7%2081%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M%2D221%2E3%2C183%2E1c%2D33%2E5%2D3%2D115%2E7%2D2%2D115%2E7%2C7c0%2C40%2E5%2C69%2E3%2C49%2E1%2C79%2E2%2C59c13%2E1%2C13%2E1%2C36%2E5%2C13%2E5%2C36%2E5%2C13%2E5V183%2E1z%22%2F%3E%3C%2Fsvg%3E"); }
 
-.nose {
+.fox-nose {
   animation: nose 17s none infinite; }
-  .nose:before {
+  .fox-nose:before {
     transform: translateZ(10.5vmax) scale(0.8);
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20168%20168%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23575A57%22%20d%3D%22M83%2E7%2C86%2E7c3%2E3%2C0%2C11%2E6%2D3%2E9%2C11%2E6%2D7%2E1c0%2D3%2E2%2D9%2E4%2D3%2E2%2D11%2E6%2D3%2E2c%2D2%2E2%2C0%2D11%2E6%2C0%2D11%2E6%2C3%2E2%20%20%20C72%2E1%2C82%2E8%2C80%2E4%2C86%2E7%2C83%2E7%2C86%2E7z%22%2F%3E%3Cpath%20stroke%3D%22%23575A57%22%20d%3D%22M83%2E7%2C102%2E3V86%2E7%22%2F%3E%3Cpath%20stroke%3D%22%23575A57%22%20fill%3D%22none%22%20d%3D%22M94%2E5%2C104%2E9c0%2C0%2D5%2E2%2D2%2E7%2D10%2E8%2D2%2E7c%2D5%2E6%2C0%2D10%2E8%2C2%2E7%2D10%2E8%2C2%2E7%22%2F%3E%3C%2Fsvg%3E"); }
 
-.eyes {
+.fox-eyes {
   animation: eyes 17s none infinite;
   transform-origin: center 4.9vmax; }
-  .eyes:before {
+  .fox-eyes:before {
     transform: translateZ(7vmax) scale(0.8);
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20168%20168%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Ccircle%20cx%3D%2258%2E9%22%20cy%3D%2268%22%20r%3D%225%2E4%22%2F%3E%3Ccircle%20cx%3D%22108%2E6%22%20cy%3D%2268%22%20r%3D%225%2E4%22%2F%3E%3C%2Fsvg%3E"); }
 
-.ears {
+.fox-ears {
   animation: ears 17s none infinite; }
 
-.ear {
+.fox-ear {
   height: 100%;
   width: 100%; }
 
-.ear:first-child {
+.fox-ear:first-child {
   animation: ear-left 17s none infinite;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20168%20168%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23CE8D86%22%20d%3D%22M48%2E7%2C84%2E4c0%2C0%2D35%2E5%2C4%2E6%2D40%2D10%2E8s%2D8%2D57%2E2%2D2%2E5%2D70%2E9c0%2C0%2C66%2E7%2C34%2C66%2E7%2C52S48%2E7%2C84%2E4%2C48%2E7%2C84%2E4z%22%2F%3E%3C%2Fsvg%3E"); }
 
-.ear:last-child {
+.fox-ear:last-child {
   animation: ear-right 17s none infinite;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20168%20168%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23CE8D86%22%20d%3D%22M118%2E8%2C84%2E4c0%2C0%2C35%2E5%2C4%2E6%2C40%2D10%2E8s8%2D57%2E2%2C2%2E5%2D70%2E9c0%2C0%2D66%2E8%2C34%2D66%2E8%2C52S118%2E8%2C84%2E4%2C118%2E8%2C84%2E4z%22%2F%3E%3C%2Fsvg%3E"); }
 
-.torso {
+.fox-torso {
   animation: torso 17s none infinite;
   height: 17.22vmax;
   width: 11.2vmax;
   top: 7.7vmax;
   left: 2.52vmax;
   transform-origin: top center; }
-  .torso:before {
+  .fox-torso:before {
     height: 100%;
     width: 100%;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%20160%20246%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23CE8D86%22%20d%3D%22M94%2E5%2C50%2E8c0%2C33%2C22%2E5%2C66%2E8%2C33%2E3%2C77%2E7s32%2E3%2C40%2E3%2C32%2E3%2C71%2E7s%2D14%2E3%2C46%2D32%2E8%2C46c%2D42%2E5%2C0%2D103%2E8%2D71%2E7%2D103%2E8%2D114%2E7%20%20%20%20S17%2E1%2C47%2E8%2C2%2E9%2C33%2E6S29%2E1%2C0%2C51%2E5%2C0s60%2E2%2C13%2C60%2E2%2C21%2E9S94%2E5%2C33%2E8%2C94%2E5%2C50%2E8z%22%2F%3E%3Cpath%20fill%3D%22%23E1E1E1%22%20d%3D%22M107%2E4%2C241%2E7C67%2E9%2C225%2E4%2C23%2E5%2C168%2C23%2E5%2C131%2E4c0%2D43%2D6%2E4%2D83%2E6%2D20%2E5%2D97%2E8S29%2E1%2C0%2C51%2E5%2C0s41%2E2%2C13%2C41%2E2%2C21%2E9%20%20%20%20S77%2E8%2C53%2E8%2C77%2E8%2C70%2E8c0%2C33%2C10%2E2%2C51%2E5%2C21%2E1%2C62%2E3s25%2E6%2C55%2E7%2C25%2E6%2C70%2E3C124%2E4%2C222%2E8%2C107%2E4%2C241%2E7%2C107%2E4%2C241%2E7z%22%2F%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M0%2C26%2E5c0%2C16%2E2%2C17%2E6%2C25%2E2%2C17%2E5%2C52%2E9c%2D0%2E1%2C20%2D4%2E7%2C29%2E9%2D4%2E7%2C43%2E6s6%2E6%2C48%2C37%2E6%2C56%2E4c0%2C0%2C0%2E7%2D5%2C3%2E7%2D5%20%20%20%20s8%2C7%2E3%2C14%2E3%2C7%2E3c0%2C0%2D0%2E7%2D5%2E7%2C1%2E7%2D5%2E7s5%2E5%2C4%2E3%2C9%2E9%2C4%2E3c0%2C0%2D1%2E7%2D8%2E9%2C2%2E6%2D13%2E2c0%2C0%2C0%2E5%2C3%2C2%2E5%2C3c0%2C0%2C1%2E8%2D5%2C4%2E5%2D6%2E5s9%2E2%2D8%2E8%2C9%2E2%2D14%2E8%20%20%20%20s%2D18%2E8%2D44%2E9%2D18%2E8%2D70%2E8s12%2E6%2D32%2E5%2C12%2E6%2D53%2E5S58%2E9%2C0%2C47%2E4%2C0S0%2C9%2C0%2C26%2E5z%22%2F%3E%3C%2Fsvg%3E"); }
 
-.front-leg {
+.fox-front-leg {
   top: 8.4vmax;
   left: 1.05vmax;
   height: 9.1vmax;
@@ -153,41 +153,41 @@ body {
   z-index: -1;
   transform-origin: center top;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%2042%20130%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23CE8D86%22%20d%3D%22M22%2E6%2C97%2E5c15%2E2%2C0%2C16%2D32%2C16%2D32S37%2E8%2C42%2C41%2E3%2C31S19%2E4%2C0%2C7%2E6%2C0C%2D4%2E1%2C0%2C0%2E3%2C20%2C3%2E8%2C31s2%2E8%2C34%2E5%2C2%2E8%2C34%2E5%20%20%20%20S7%2E3%2C97%2E5%2C22%2E6%2C97%2E5z%22%2F%3E%3C%2Fsvg%3E"); }
-  .front-leg:before, .front-leg:after {
+  .fox-front-leg:before, .fox-front-leg:after {
     transform-origin: 2.8vmax 63%;
     height: 100%;
     width: 100%; }
-  .front-leg:before {
+  .fox-front-leg:before {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%2042%20130%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23CE8D86%22%20d%3D%22M22%2E6%2C129%2E7c9%2E5%2C0%2C11%2E2%2D7%2E3%2C11%2E2%2D9%2E3s2%2E2%2D36%2E2%2C0%2D40%2E5c%2D2%2E2%2D4%2E3%2D2%2E5%2D6%2E3%2D11%2E2%2D6%2E3s%2D9%2C2%2D11%2E2%2C6%2E3%20%20%20%20c%2D2%2E2%2C4%2E3%2C0%2C38%2E5%2C0%2C40%2E5S13%2E1%2C129%2E7%2C22%2E6%2C129%2E7z%22%2F%3E%3C%2Fsvg%3E"); }
-  .front-leg:first-child {
+  .fox-front-leg:first-child {
     animation: upper-left-leg 17s none infinite; }
-    .front-leg:first-child:before {
+    .fox-front-leg:first-child:before {
       animation: lower-left-leg 17s none infinite; }
-  .front-leg:last-child {
+  .fox-front-leg:last-child {
     animation: upper-right-leg 17s none infinite; }
-    .front-leg:last-child:before {
+    .fox-front-leg:last-child:before {
       animation: lower-right-leg 17s none infinite; }
-  .front-leg + .front-leg {
+  .fox-front-leg + .fox-front-leg {
     left: 6.3vmax;
     z-index: 1; }
 
-.tail {
+.fox-tail {
   z-index: -1;
   width: 2.8vmax;
   height: 2.8vmax;
   transform-origin: center bottom; }
-  .tail:before {
+  .fox-tail:before {
     transform-origin: center bottom;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20viewBox%3D%220%200%2066%2E4%2066%2E4%22%20xmlns%3D%22http%3A%2F%2Fwww%2Ew3%2Eorg%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23CE8D86%22%20d%3D%22M33%2E2%2C0C14%2E9%2C0%2C0%2C14%2E9%2C0%2C33%2E2C0%2C42%2E7%2C0%2E9%2C61%2C2%2E6%2C66%2E4h30%2E6h30%2E6c1%2E7%2D5%2E3%2C2%2E6%2D23%2E7%2C2%2E6%2D33%2E2%20%20%20C66%2E4%2C14%2E9%2C51%2E5%2C0%2C33%2E2%2C0z%22%2F%3E%3C%2Fsvg%3E"); }
-  .fox > .tail {
+  .fox > .fox-tail {
     transform: rotate(90deg);
     top: 19.6vmax;
     left: 11.2vmax; }
-  .tail > .tail {
+  .fox-tail > .fox-tail {
     animation: tail-inner 3s ease-in-out both infinite;
     top: -1.4vmax;
     transform: scale(1.1) rotate(-35deg); }
-  .tail > .tail > .tail > .tail > .tail {
+  .fox-tail > .fox-tail > .fox-tail > .fox-tail > .fox-tail {
     animation: tail-outer 3s ease-in-out both infinite;
     transform: scale(1.1) rotate(15deg); }
 
@@ -203,7 +203,7 @@ body {
   background: white;
   border-radius: 50%;
   animation: snow 1.3s linear infinite;
-  box-shadow: 499.69083px 445.85659px white, 2098.69083px 445.85659px white, 1553.43873px 141.03473px white, 3152.43873px 141.03473px white, 1352.8948px 77.75642px white, 2951.8948px 77.75642px white, 1414.37796px 416.08457px white, 3013.37796px 416.08457px white, 1132.77505px 313.70247px white, 2731.77505px 313.70247px white, 1392.6789px 438.35549px white, 2991.6789px 438.35549px white, 1228.53076px 31.38007px white, 2827.53076px 31.38007px white, 412.23028px 423.12279px white, 2011.23028px 423.12279px white, 934.57461px 494.6026px white, 2533.57461px 494.6026px white, 377.42437px 352.07441px white, 1976.42437px 352.07441px white, 957.72058px 520.43132px white, 2556.72058px 520.43132px white, 1110.07381px 260.58223px white, 2709.07381px 260.58223px white, 1261.45947px 333.39606px white, 2860.45947px 333.39606px white, 1161.70601px 337.74202px white, 2760.70601px 337.74202px white, 1001.31134px 435.46839px white, 2600.31134px 435.46839px white, 749.74201px 107.81561px white, 2348.74201px 107.81561px white, 924.62221px 191.01267px white, 2523.62221px 191.01267px white, 29.14829px 438.11284px white, 1628.14829px 438.11284px white, 423.61349px 303.0608px white, 2022.61349px 303.0608px white, 764.7806px 338.55492px white, 2363.7806px 338.55492px white, 1215.31617px 330.63534px white, 2814.31617px 330.63534px white, 1482.34382px 305.41435px white, 3081.34382px 305.41435px white, 1105.00743px 290.36477px white, 2704.00743px 290.36477px white, 1085.86704px 11.71269px white, 2684.86704px 11.71269px white, 671.22198px 331.8622px white, 2270.22198px 331.8622px white, 970.89867px 128.45429px white, 2569.89867px 128.45429px white, 284.68031px 188.71235px white, 1883.68031px 188.71235px white, 1086.58212px 505.49358px white, 2685.58212px 505.49358px white, 904.93687px 491.20023px white, 2503.93687px 491.20023px white, 1131.6562px 68.99729px white, 2730.6562px 68.99729px white, 1193.22108px 361.79788px white, 2792.22108px 361.79788px white, 1485.65952px 343.21626px white, 3084.65952px 343.21626px white, 140.52897px 157.64276px white, 1739.52897px 157.64276px white, 1566.74142px 478.34855px white, 3165.74142px 478.34855px white, 579.67921px 474.46594px white, 2178.67921px 474.46594px white, 1158.28764px 363.05684px white, 2757.28764px 363.05684px white, 737.01708px 7.26915px white, 2336.01708px 7.26915px white, 248.37625px 131.87693px white, 1847.37625px 131.87693px white, 951.2176px 443.41603px white, 2550.2176px 443.41603px white, 858.49763px 352.11005px white, 2457.49763px 352.11005px white, 1125.89436px 379.32185px white, 2724.89436px 379.32185px white, 548.18127px 177.67683px white, 2147.18127px 177.67683px white, 47.55225px 521.56108px white, 1646.55225px 521.56108px white, 81.31154px 492.53489px white, 1680.31154px 492.53489px white, 1298.08459px 213.31347px white, 2897.08459px 213.31347px white, 172.84465px 184.68074px white, 1771.84465px 184.68074px white, 1558.6769px 389.37413px white, 3157.6769px 389.37413px white, 945.09324px 237.28506px white, 2544.09324px 237.28506px white, 1573.5994px 260.84333px white, 3172.5994px 260.84333px white, 737.06376px 94.56299px white, 2336.06376px 94.56299px white, 1450.96405px 443.41979px white, 3049.96405px 443.41979px white, 162.74547px 116.24845px white, 1761.74547px 116.24845px white, 941.91471px 273.60403px white, 2540.91471px 273.60403px white, 960.24818px 525.09212px white, 2559.24818px 525.09212px white, 885.61941px 467.25657px white, 2484.61941px 467.25657px white, 482.7539px 327.45092px white, 2081.7539px 327.45092px white, 977.23988px 304.92235px white, 2576.23988px 304.92235px white, 799.07059px 402.44829px white, 2398.07059px 402.44829px white, 1213.87281px 484.92924px white, 2812.87281px 484.92924px white, 553.7858px 36.73488px white, 2152.7858px 36.73488px white, 480.64538px 114.57058px white, 2079.64538px 114.57058px white, 46.84783px 530.35329px white, 1645.84783px 530.35329px white, 713.39721px 7.06538px white, 2312.39721px 7.06538px white, 1151.99803px 177.45555px white, 2750.99803px 177.45555px white, 73.84489px 472.12684px white, 1672.84489px 472.12684px white, 76.84373px 226.97486px white, 1675.84373px 226.97486px white, 1552.99751px 462.82898px white, 3151.99751px 462.82898px white, 1267.51642px 253.96566px white, 2866.51642px 253.96566px white, 1515.79658px 249.93237px white, 3114.79658px 249.93237px white, 1205.04098px 377.14587px white, 2804.04098px 377.14587px white, 579.20659px 359.10938px white, 2178.20659px 359.10938px white, 1143.23084px 412.19081px white, 2742.23084px 412.19081px white, 699.28399px 391.91954px white, 2298.28399px 391.91954px white, 568.08689px 75.1093px white, 2167.08689px 75.1093px white, 680.44998px 187.11193px white, 2279.44998px 187.11193px white, 891.00895px 238.37754px white, 2490.00895px 238.37754px white, 1190.14996px 335.54896px white, 2789.14996px 335.54896px white, 1064.218px 92.82509px white, 2663.218px 92.82509px white, 932.71863px 376.32475px white, 2531.71863px 376.32475px white, 1557.13728px 457.00767px white, 3156.13728px 457.00767px white, 1261.03773px 314.78448px white, 2860.03773px 314.78448px white, 1255.53096px 310.15916px white, 2854.53096px 310.15916px white, 78.57325px 322.242px white, 1677.57325px 322.242px white, 1012.15284px 5.70189px white, 2611.15284px 5.70189px white, 617.80998px 289.41573px white, 2216.80998px 289.41573px white, 927.42842px 429.80205px white, 2526.42842px 429.80205px white, 623.24149px 37.46055px white, 2222.24149px 37.46055px white, 81.50374px 222.34899px white, 1680.50374px 222.34899px white, 1242.2951px 404.70722px white, 2841.2951px 404.70722px white, 876.34129px 486.53157px white, 2475.34129px 486.53157px white, 425.53767px 339.99655px white, 2024.53767px 339.99655px white, 558.76001px 521.26088px white, 2157.76001px 521.26088px white, 741.13135px 384.64994px white, 2340.13135px 384.64994px white, 874.89524px 180.20758px white, 2473.89524px 180.20758px white, 1581.12267px 285.74638px white, 3180.12267px 285.74638px white, 840.91162px 506.83543px white, 2439.91162px 506.83543px white, 398.78994px 509.81775px white, 1997.78994px 509.81775px white, 644.26919px 363.81086px white, 2243.26919px 363.81086px white, 623.4244px 199.18058px white, 2222.4244px 199.18058px white, 214.35568px 147.20021px white, 1813.35568px 147.20021px white; }
+  box-shadow: 18.30471vmax 38.46056vmax white, 144.30471vmax 38.46056vmax white, 87.05865vmax 34.08765vmax white, 213.05865vmax 34.08765vmax white, 54.01524vmax 10.93419vmax white, 180.01524vmax 10.93419vmax white, 121.36475vmax 24.68086vmax white, 247.36475vmax 24.68086vmax white, 29.982vmax 8.24971vmax white, 155.982vmax 8.24971vmax white, 4.82297vmax 39.22909vmax white, 130.82297vmax 39.22909vmax white, 120.78104vmax 23.62528vmax white, 246.78104vmax 23.62528vmax white, 93.22946vmax 32.63353vmax white, 219.22946vmax 32.63353vmax white, 96.92382vmax 1.5035vmax white, 222.92382vmax 1.5035vmax white, 63.56073vmax 17.09629vmax white, 189.56073vmax 17.09629vmax white, 44.51767vmax 5.4567vmax white, 170.51767vmax 5.4567vmax white, 28.76142vmax 6.85067vmax white, 154.76142vmax 6.85067vmax white, 83.99411vmax 13.7879vmax white, 209.99411vmax 13.7879vmax white, 75.69978vmax 18.96799vmax white, 201.69978vmax 18.96799vmax white, 54.29159vmax 14.01906vmax white, 180.29159vmax 14.01906vmax white, 111.45281vmax 12.98489vmax white, 237.45281vmax 12.98489vmax white, 72.39572vmax 32.17087vmax white, 198.39572vmax 32.17087vmax white, 1.24076vmax 21.41148vmax white, 127.24076vmax 21.41148vmax white, 78.62719vmax 41.54731vmax white, 204.62719vmax 41.54731vmax white, 4.38472vmax 34.94608vmax white, 130.38472vmax 34.94608vmax white, 6.49818vmax 8.29498vmax white, 132.49818vmax 8.29498vmax white, 98.89044vmax 22.61029vmax white, 224.89044vmax 22.61029vmax white, 113.96158vmax 21.76656vmax white, 239.96158vmax 21.76656vmax white, 97.51387vmax 13.51012vmax white, 223.51387vmax 13.51012vmax white, 99.56053vmax 8.45836vmax white, 225.56053vmax 8.45836vmax white, 17.76694vmax 1.05348vmax white, 143.76694vmax 1.05348vmax white, 89.1008vmax 1.1723vmax white, 215.1008vmax 1.1723vmax white, 66.75077vmax 41.57552vmax white, 192.75077vmax 41.57552vmax white, 34.50489vmax 9.83685vmax white, 160.50489vmax 9.83685vmax white, 45.51065vmax 39.09939vmax white, 171.51065vmax 39.09939vmax white, 78.49534vmax 13.88464vmax white, 204.49534vmax 13.88464vmax white, 17.52642vmax 21.10267vmax white, 143.52642vmax 21.10267vmax white, 39.79826vmax 14.30994vmax white, 165.79826vmax 14.30994vmax white, 23.48921vmax 18.6826vmax white, 149.48921vmax 18.6826vmax white, 119.74103vmax 17.18056vmax white, 245.74103vmax 17.18056vmax white, 4.18866vmax 4.45555vmax white, 130.18866vmax 4.45555vmax white, 101.02357vmax 2.37415vmax white, 227.02357vmax 2.37415vmax white, 25.83579vmax 10.92822vmax white, 151.83579vmax 10.92822vmax white, 42.02284vmax 6.85262vmax white, 168.02284vmax 6.85262vmax white, 63.3973vmax 25.0225vmax white, 189.3973vmax 25.0225vmax white, 38.50315vmax 14.58957vmax white, 164.50315vmax 14.58957vmax white, 12.67276vmax 4.48643vmax white, 138.67276vmax 4.48643vmax white, 81.74241vmax 30.79758vmax white, 207.74241vmax 30.79758vmax white, 94.34958vmax 9.35469vmax white, 220.34958vmax 9.35469vmax white, 47.36556vmax 6.97952vmax white, 173.36556vmax 6.97952vmax white, 90.06585vmax 9.49769vmax white, 216.06585vmax 9.49769vmax white, 85.61398vmax 15.76039vmax white, 211.61398vmax 15.76039vmax white, 1.28741vmax 7.11345vmax white, 127.28741vmax 7.11345vmax white, 122.42409vmax 36.56348vmax white, 248.42409vmax 36.56348vmax white, 50.85357vmax 11.76313vmax white, 176.85357vmax 11.76313vmax white; }
 
 .snow:after {
   width: 8px;
@@ -212,9 +212,9 @@ body {
 
 @keyframes snow {
   from {
-    transform: rotate(10deg) translateY(-266.5px) translateX(-1599px); }
+    transform: rotate(10deg) translateY(-21vmax) translateX(-126vmax); }
   to {
-    transform: rotate(10deg) translateY(-266.5px) translateX(0); } }
+    transform: rotate(10deg) translateY(-21vmax) translateX(0); } }
 
 @keyframes tail-inner {
   0% {

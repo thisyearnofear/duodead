@@ -5,7 +5,7 @@ $color-text: #84899C;
 $color-nose: #575A57;
 $duration: 17s;
 
-$frac: 0.07;
+$size: 0.07;
 
 *, *:before, *:after {
   position: relative;
@@ -75,8 +75,8 @@ body {
 
 .fox {
   position: absolute;
-  height: 375vmax * $frac;
-  width: 260vmax * $frac;
+  height: 375vmax * $size;
+  width: 260vmax * $size;
   transform-style: preserve-3d;
   animation: fox $duration none infinite,
     squigglevision 0.3s infinite;
@@ -107,10 +107,10 @@ body {
   }
 }
 
-.head {
+.fox-head {
   animation: head $duration none infinite;
-  height: 168vmax * $frac;
-  width: 168vmax * $frac;
+  height: 168vmax * $size;
+  width: 168vmax * $size;
   z-index: 2;
   top: 0;
   left: 0;
@@ -130,8 +130,8 @@ body {
   background-size: contain;
 }
 
-.face {
-  perspective: 1000vmax * $frac;
+.fox-face {
+  perspective: 1000vmax * $size;
   perspective-origin: center center;
 
   &, > * {
@@ -141,7 +141,7 @@ body {
   }
 }
 
-.front {
+.fox-front {
   animation: front $duration none infinite;
   transform-origin: bottom center;
 
@@ -159,10 +159,10 @@ body {
   &:before {
     animation: front-before $duration none infinite;
     transform-origin: right top;
-    height: 81vmax * $frac;
-    width: 110vmax * $frac;
-    bottom: 8vmax * $frac;
-    left: -26vmax * $frac;
+    height: 81vmax * $size;
+    width: 110vmax * $size;
+    bottom: 8vmax * $size;
+    left: -26vmax * $size;
     transform: rotateY(90deg);
 
     @include svg((viewBox: (-337 181.6 115.7 81))) {
@@ -174,11 +174,11 @@ body {
   }
 }
 
-.nose {
+.fox-nose {
   animation: nose $duration none infinite;
 
   &:before {
-    transform: translateZ(150vmax * $frac) scale(0.8);
+    transform: translateZ(150vmax * $size) scale(0.8);
 
     @include svg((viewBox: (0 0 168 168))) {
       @include svg('path', (
@@ -198,12 +198,12 @@ body {
   }
 }
 
-.eyes {
+.fox-eyes {
   animation: eyes $duration none infinite;
-  transform-origin: center 70vmax * $frac;
+  transform-origin: center 70vmax * $size;
 
   &:before {
-    transform: translateZ(100vmax * $frac) scale(0.8);
+    transform: translateZ(100vmax * $size) scale(0.8);
 
     @include svg((viewBox: (0 0 168 168))) {
       @include svg('circle', (
@@ -221,16 +221,16 @@ body {
   }
 }
 
-.ears {
+.fox-ears {
   animation: ears $duration none infinite;
 }
 
-.ear {
+.fox-ear {
   height: 100%;
   width: 100%;
 }
 
-.ear:first-child {
+.fox-ear:first-child {
   animation: ear-left $duration none infinite;
 
   @include svg((viewBox: (0 0 168 168))) {
@@ -241,7 +241,7 @@ body {
   }
 }
 
-.ear:last-child {
+.fox-ear:last-child {
   animation: ear-right $duration none infinite;
 
   @include svg((viewBox: (0 0 168 168))) {
@@ -252,12 +252,12 @@ body {
   }
 }
 
-.torso {
+.fox-torso {
   animation: torso $duration none infinite;
-  height: 246vmax * $frac;
-  width: 160vmax * $frac;
-  top: 110vmax * $frac;
-  left: 36vmax * $frac;
+  height: 246vmax * $size;
+  width: 160vmax * $size;
+  top: 110vmax * $size;
+  left: 36vmax * $size;
   transform-origin: top center;
 
   &:before {
@@ -280,16 +280,16 @@ body {
   }
 }
 
-.front-leg {
-  top: 120vmax * $frac;
-  left: 15vmax * $frac;
-  height: 130vmax * $frac;
-  width: 42vmax * $frac;
+.fox-front-leg {
+  top: 120vmax * $size;
+  left: 15vmax * $size;
+  height: 130vmax * $size;
+  width: 42vmax * $size;
   z-index: -1;
   transform-origin: center top;
 
   &:before, &:after {
-    transform-origin: 40vmax * $frac 63%;
+    transform-origin: 40vmax * $size 63%;
     height: 100%;
     width: 100%;
   }
@@ -324,15 +324,15 @@ body {
     }
   }
 
-  + .front-leg {
-    left: 90vmax * $frac;
+  + .fox-front-leg {
+    left: 90vmax * $size;
     z-index: 1;
   }
 }
 
-.tail {
+.fox-tail {
   z-index: -1;
-  $initial-tail-width: 40vmax * $frac;
+  $initial-tail-width: 40vmax * $size;
   width: $initial-tail-width;
   height: $initial-tail-width;
   transform-origin: center bottom;
@@ -349,11 +349,11 @@ body {
 
   .fox > & {
     transform: rotate(90deg);
-    top: 280vmax * $frac;
-    left: 160vmax * $frac;
+    top: 280vmax * $size;
+    left: 160vmax * $size;
   }
 
-  > .tail {
+  > .fox-tail {
     animation: tail-inner 3s ease-in-out both infinite;
     top: -$initial-tail-width / 2;
     transform:
@@ -361,7 +361,7 @@ body {
       rotate(-35deg);
   }
 
-  > .tail > .tail > .tail > .tail {
+  > .fox-tail > .fox-tail > .fox-tail > .fox-tail {
     // opacity: 0.5;
     animation: tail-outer 3s ease-in-out both infinite;
     transform:
@@ -371,7 +371,7 @@ body {
 }
 
 .snow {
-  $num-snowflakes: 100;
+  $num-snowflakes: 50;
 
   &:before, &:after {
     content: '';
@@ -389,8 +389,8 @@ body {
     $snowflakes: ();
 
     @for $i from 1 through $num-snowflakes {
-      $top: random() * 533px;
-      $left: random() * 533px * 3;
+      $top: random() * 42vmax;
+      $left: random() * 42vmax * 3;
 
       $snowflakes: append($snowflakes,
         #{$left $top white},
@@ -398,7 +398,7 @@ body {
       );
 
       $snowflakes: append($snowflakes,
-        #{$left + 533px * 3 $top white},
+        #{$left + 42vmax * 3 $top white},
         comma
       );
     }
@@ -416,12 +416,12 @@ body {
 @keyframes snow {
   from {
     transform: rotate(10deg)
-      translateY(-533px / 2)
-      translateX(#{-533px * 3});
+      translateY(-42vmax / 2)
+      translateX(#{-42vmax * 3});
   }
   to {
     transform: rotate(10deg)
-      translateY(-533px / 2)
+      translateY(-42vmax / 2)
       translateX(0);
   }
 }
@@ -452,11 +452,11 @@ $animations: (
     (15.5s, $duration): 0,
   ),
   'torso': (
-    (1s, 2s, 3s, 4s): translateY(5vmax * $frac),
+    (1s, 2s, 3s, 4s): translateY(5vmax * $size),
     (1.2s, 2.2s, 3.2s, 4.2s): translateY(0),
   ),
   'head': (
-    (1s, 2s, 3s, 4s): translateY(10vmax * $frac),
+    (1s, 2s, 3s, 4s): translateY(10vmax * $size),
     (1.2s, 2.2s, 3.2s, 4.2s): translateY(0),
   ),
   'upper-left-leg': (
@@ -521,13 +521,13 @@ $animations: (
   'ear-right': (
     (4s, 5.5s, 7s): rotate(-10deg),
     6s: rotate(-5deg),
-    (7.5s, 9s): translateX(-19vmax * $frac) rotateZ(-7deg) scaleX(1.2),
+    (7.5s, 9s): translateX(-19vmax * $size) rotateZ(-7deg) scaleX(1.2),
     (9.5s, 12s): rotate(-10deg)
   ),
   'front': (
-    (2.5s, 4s, 5s, 7s): translateX(-3vmax * $frac) skewX(5deg) scaleX(0.9),
-    4.5s: translateX(-3vmax * $frac) skewX(5deg) scaleX(0.9) scaleY(0.9),
-    (7.5s, 9s): translateY(5vmax * $frac),
+    (2.5s, 4s, 5s, 7s): translateX(-3vmax * $size) skewX(5deg) scaleX(0.9),
+    4.5s: translateX(-3vmax * $size) skewX(5deg) scaleX(0.9) scaleY(0.9),
+    (7.5s, 9s): translateY(5vmax * $size),
     (9.5s, 12s): skewX(-10deg),
     13s: skewX(0),
   ),
