@@ -1,4 +1,4 @@
-@import 'node_modules/sass-svg/index';
+@import '../node_modules/sass-svg/index';
 
 $husky-colors: (
   'bg': #4F8EDB,
@@ -224,39 +224,25 @@ body {
   background-color: husky-color('bg');
 }
 
-.codrops-header > h1 {
-  color: white;
-
-  > span {
-    color: rgba(white, 0.6);
-  }
+.codrops-header h1 {
+	animation: squigglevision 0.3s infinite;
+	animation-timing-function: cubic-bezier(0, 0, 0.80, 0.90);
 }
 
-.content--related {
-  background: husky-color('snow');
-}
-
-.media-item {
-  color: #C8DAF2;
-
-  &:hover {
-    color: #343C60;
-  }
-}
-
-.codrops-icon {
-  color: rgba(white, 0.6);
-
-  &.codrops-icon--drop:before {
-    color: husky-color('primary');
-  }
+.codrops-icon--drop:before {
+  color: #3B6BA5;
 }
 
 .content--husky {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  height: 100vh;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  width: 100%;
   margin: 0;
   padding: 3rem 0;
   animation: squigglevision 0.3s infinite;
@@ -341,9 +327,9 @@ body {
   }
   
   &:before {
-    width: 90%;
+    width: 70%;
     height: 0.4vmin;
-    background: mix(white, husky-color('primary'), 30%);
+    background: husky-color('lighter');
     border-radius: 0.4vmin;
     top: 100%;
     left: 5%;
@@ -351,11 +337,13 @@ body {
   }
   
   &:after {
-    width: 100%;
-    height: 10%;
+    width: 100vw;
+    left: 50%;
+    height: 3rem;
     top: calc(100% + 0.4vmin);
     z-index: 3;
     background: husky-color('snow');
+    transform: translateX(-50%);
   }
 }
 
@@ -786,13 +774,14 @@ body {
 
 .snow {
   $snow-color: rgba(white, 0.8);
-  $num-snowflakes: 20;
+  $num-snowflakes: 40;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 5;
+  pointer-events: none;
 
   &:before, &:after {
     content: '';

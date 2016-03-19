@@ -1,10 +1,10 @@
 # Animated Animals
 
-*CSS and SVG animations of a fox and husky*, *David Khourshid*
+Demo for the tutorial on how to animate two SVG animals using only CSS (SCSS). By David Khourshid.
 
-[Article on Codrops]()
+[Article on Codrops](http://tympanus.net/codrops/?p=26337)
 
-[Demo]()
+[Demo](http://tympanus.net/Tutorials/AnimatedAnimals/)
 
 ## License
 
@@ -14,7 +14,9 @@ Read more here: [License](http://tympanus.net/codrops/licensing/)
 
 ## Credits
 
-*third party resources*
+- [Husky love.](https://dribbble.com/shots/2418721-Husky-love) by Ryan Rumbolt (Illustration by [Alexey Kuvaldin)](https://dribbble.com/kuvaldin)
+- [Sass-SVG](https://github.com/davidkpiano/sass-svg)
+- [Squiggly Text](http://codepen.io/lbebber/details/KwGEQv/) by [Lucas Bebber](https://twitter.com/lucasbebber)
 
 ## Misc
 
