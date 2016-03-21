@@ -244,11 +244,6 @@ body {
 	top: 110vmax * $size;
 	left: 36vmax * $size;
 	transform-origin: top center;
-} 
-
-.fox-torso {
-	height: 100%;
-	width: 100%;
 
 	&:before {
 		height: 100%;
@@ -299,6 +294,7 @@ body {
 
 	&:first-child {
 		animation: upper-left-leg $duration forwards;
+		z-index: -1;
 
 		&:before {
 			animation: lower-left-leg $duration forwards;
