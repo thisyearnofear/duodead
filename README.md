@@ -15,6 +15,7 @@ Read more here: [License](http://tympanus.net/codrops/licensing/)
 ## Credits
 
 - [Husky love.](https://dribbble.com/shots/2418721-Husky-love) by Ryan Rumbolt (Illustration by [Alexey Kuvaldin)](https://dribbble.com/kuvaldin)
+- Fox design based on a [short film by Ari Gibson and Jason Pamment](https://vimeo.com/44088118)
 - [Sass-SVG](https://github.com/davidkpiano/sass-svg)
 - [Squiggly Text](http://codepen.io/lbebber/details/KwGEQv/) by [Lucas Bebber](https://twitter.com/lucasbebber)
 
