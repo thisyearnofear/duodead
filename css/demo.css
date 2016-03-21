@@ -27,6 +27,7 @@ a {
 
 a:hover, a:focus {
 	color: #2C2F36;
+	outline: none;
 }
 
 .hidden {
