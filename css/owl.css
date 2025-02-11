@@ -1,0 +1,412 @@
+*,
+*:before,
+*:after {
+  position: relative;
+}
+
+body {
+  background: white;
+}
+
+.content--owl {
+  background: linear-gradient(135deg, #78c800 0%, #8ee000 50%, #1cb0f6 100%);
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content--owl:before {
+  content: "💚";
+  position: absolute;
+  font-size: 1.5rem;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.5;
+  top: 20%;
+  left: 20%;
+}
+
+.content--owl:after {
+  content: "🎓";
+  position: absolute;
+  font-size: 1.5rem;
+  animation: float 6s ease-in-out infinite 2s;
+  opacity: 0.5;
+  top: 30%;
+  right: 20%;
+}
+
+.content--owl .emoji {
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.content--owl .emoji:nth-child(1) {
+  content: "🌟";
+  top: 15%;
+  left: 45%;
+  animation: float 7s ease-in-out infinite 1s;
+}
+
+.content--owl .emoji:nth-child(2) {
+  content: "📚";
+  top: 40%;
+  left: 15%;
+  animation: float 8s ease-in-out infinite 3s;
+}
+
+.content--owl .emoji:nth-child(3) {
+  content: "✨";
+  top: 25%;
+  right: 25%;
+  animation: float 6s ease-in-out infinite 2s;
+}
+
+.scene {
+  transform: scale(0.8);
+  animation: appear 0.5s ease-out forwards;
+}
+
+.owl-body {
+  background-color: #78c800;
+  position: relative;
+  top: 5px;
+  height: 175px;
+  width: 152.5px;
+  border-radius: 40px 30px 70px 70px;
+  animation: body-bounce 3s ease-in-out infinite;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.owl-body:before,
+.owl-body:after {
+  content: "";
+  background-color: #78c800;
+  position: absolute;
+  width: 52.5px;
+  height: 42px;
+  top: -4px;
+  z-index: 2;
+}
+.owl-body:before {
+  border-radius: 40% 60% 0 0;
+  left: 0;
+}
+.owl-body:after {
+  border-radius: 60% 40% 0 0;
+  right: 0;
+}
+.owl-body__wings .wing {
+  position: absolute;
+  background-color: #78c800;
+  width: 50px;
+  height: 80px;
+  border-radius: 80px 15px 15px 80px;
+  top: 50%;
+  animation: wing-flap 0.6s ease-in-out infinite;
+  animation-play-state: paused;
+}
+.owl-body:hover .wing {
+  animation-play-state: running;
+}
+.owl-body__wings .wing:nth-of-type(1) {
+  transform: rotate(-35deg);
+  right: -18px;
+}
+.owl-body__wings .wing:nth-of-type(2) {
+  transform: rotate(215deg);
+  left: -18px;
+}
+.owl-body__eyebrows {
+  position: absolute;
+  width: 70%;
+  left: 15%;
+  top: 35px;
+  background-color: #8ee000;
+  height: 40px;
+  z-index: 3;
+  animation: eyebrow-bounce 3s ease-in-out infinite;
+  transition: transform 0.3s;
+}
+.owl-body__eyebrows .eyebrow {
+  background-color: #8ee000;
+  position: absolute;
+  width: 15px;
+  height: 40px;
+  border-radius: 80px 10px 10px 80px;
+  top: -27.5px;
+}
+.owl-body__eyebrows .eyebrow:after {
+  content: "";
+  background-color: #8ee000;
+  position: absolute;
+  width: 15px;
+  height: 40px;
+  border-radius: 80px 10px 10px 80px;
+  left: -15px;
+  top: 0;
+}
+.owl-body__eyebrows .eyebrow:first-child {
+  left: 15.5px;
+  transform: rotate(-40deg);
+}
+.owl-body__eyebrows .eyebrow:last-child {
+  left: 77.5px;
+  transform: rotate(-140deg);
+}
+.owl-body__eyes {
+  &:after {
+    content: "";
+    background-color: #78c800;
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 20px);
+    height: 20px;
+    width: 40px;
+    border-radius: 0 0 30px 30px;
+    z-index: 10;
+  }
+}
+.owl-body__eyes .eye {
+  height: 52.5px;
+  z-index: 4;
+  width: 40px;
+  background-color: white;
+  position: absolute;
+  top: 25px;
+  border-radius: 100px;
+  border: 10px solid #8ee000;
+  animation: blink 3s ease-in-out infinite;
+}
+.owl-body__eyes .eye:before,
+.owl-body__eyes .eye:after {
+  content: "";
+  position: absolute;
+  border-radius: 20px;
+  top: 10px;
+}
+.owl-body__eyes .eye:before {
+  height: 32px;
+  width: 20px;
+  background-color: #4b4b4b;
+}
+.owl-body__eyes .eye:after {
+  height: 12.5px;
+  width: 12.5px;
+  background-color: white;
+}
+.owl-body__eyes .eye:nth-of-type(1) {
+  left: 10px;
+}
+.owl-body__eyes .eye:nth-of-type(1):before {
+  left: 12.5px;
+}
+.owl-body__eyes .eye:nth-of-type(1):after {
+  left: 8px;
+}
+.owl-body__eyes .eye:nth-of-type(2) {
+  right: 10px;
+}
+.owl-body__eyes .eye:nth-of-type(2):before {
+  right: 12.5px;
+}
+.owl-body__eyes .eye:nth-of-type(2):after {
+  left: 3px;
+}
+.owl-body__beak {
+  width: 30px;
+  z-index: 5;
+  height: 14px;
+  background-color: #ffc200;
+  position: absolute;
+  top: 70px;
+  left: calc(50% - 15px);
+  border-radius: 30px 30px 0 0;
+  animation: beak-bounce 3s ease-in-out infinite;
+}
+.owl-body__beak .smile {
+  position: absolute;
+  top: 14px;
+  box-sizing: border-box;
+  border: 15px solid transparent;
+  border-top: 3px solid #ffc200;
+}
+.owl-body__beak:before,
+.owl-body__beak:after {
+  content: "";
+  position: absolute;
+}
+.owl-body__beak:after {
+  width: 11px;
+  height: 4px;
+  top: 3px;
+  left: 9px;
+  background-color: #ffe180;
+  border-radius: 10px 10px 0 0;
+}
+.owl-body__beak:before {
+  width: 23px;
+  height: 11px;
+  top: 14px;
+  left: 3px;
+  background-color: #f49000;
+  border-radius: 0 0 30px 30px;
+}
+.owl-body__belly {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  animation: belly-bounce 3s ease-in-out infinite;
+}
+.owl-body__belly .feather {
+  background-color: #8ee000;
+  width: 22px;
+  height: 10px;
+  border-radius: 0 0 40px 40px;
+  position: absolute;
+  left: calc(50% - 13px);
+}
+.owl-body__belly .feather:nth-child(2) {
+  top: -18px;
+  left: calc(50% - 30px);
+}
+.owl-body__belly .feather:nth-child(3) {
+  top: -18px;
+  left: calc(50% + 4px);
+}
+.owl-body__feet .foot {
+  position: absolute;
+  height: 22.5px;
+  width: 40px;
+  background-color: #f49000;
+  bottom: -12px;
+  border-radius: 40px;
+  z-index: -1;
+  animation: feet-bounce 3s ease-in-out infinite;
+}
+.owl-body__feet .foot:nth-of-type(1) {
+  left: 32.5px;
+}
+.owl-body__feet .foot:nth-of-type(2) {
+  right: 32.5px;
+}
+.owl-body__indent {
+  position: absolute;
+  background-color: #f0f0f0;
+  width: 52px;
+  height: 52px;
+  top: -30px;
+  left: 50px;
+  border-radius: 12.5px;
+  transform: rotate(-22deg) skewX(45deg) scaleY(0.7);
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+}
+@keyframes body-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes wing-flap {
+  0%,
+  100% {
+    transform: rotate(-35deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-15deg) translateY(-10px);
+  }
+}
+@keyframes blink {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(1);
+  }
+  97.5% {
+    transform: scaleY(0.1);
+  }
+}
+@keyframes eyebrow-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+@keyframes beak-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+@keyframes belly-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+@keyframes feet-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+@keyframes squigglevision {
+  0% {
+    filter: url("#squiggly-0");
+  }
+  25% {
+    filter: url("#squiggly-1");
+  }
+  50% {
+    filter: url("#squiggly-2");
+  }
+  75% {
+    filter: url("#squiggly-3");
+  }
+  100% {
+    filter: url("#squiggly-4");
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
